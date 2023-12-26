@@ -67,9 +67,42 @@ const projectConfig = {
 };
 ```
 
+7. **Desconfigure Meilisearch:**
+    * Meilisearch is not necessary at this time so go into the `medusa-config.js` file and comment out the following lines of code seen below, only comment out the ones seen commented here, from line 52 to 78 in the `medusa-config.js` file:
+
+```
+// resolve: `medusa-plugin-meilisearch`,
+// options: {
+//   config: {
+//     host: process.env.MEILISEARCH_HOST,
+//     apiKey: process.env.MEILISEARCH_API_KEY,
+//   },
+//   settings: {
+//     products: {
+//       indexSettings: {
+//         searchableAttributes: [
+//           "title", 
+//           "description",
+//           "variant_sku",
+//         ],
+//         displayedAttributes: [
+//           "id", 
+//           "title", 
+//           "description", 
+//           "variant_sku", 
+//           "thumbnail", 
+//           "handle",
+//         ],
+//       },
+//       primaryKey: "id",
+//     },
+//   },
+// },
+```
+
 **Note:** You will need to set the `REDIS_URL` environment variable in your `.env` file to the URL of your Redis server if you decide to use redis.
 
-7. **Seed the database:**
+8. **Seed the database:**
     * Run the following command to seed example data into the database:
 
 ```
@@ -78,7 +111,7 @@ npm run seed
 
 **Note:** This command should only be run once.
 
-8. **Start the application:**
+9. **Start the application:**
     * Run the following command to start the Medusa backend and admin:
 
 ```

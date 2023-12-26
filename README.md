@@ -1,5 +1,7 @@
 ## Medusa.js Admin and Backend Installation
 
+**It is possible to install only this repository, but for a better experience it is recommended that you install the entire medusa project from this repository 🡢** https://gitlab.com/erpsistemas/medusa-project
+
 **Requirements**
 
 * Node.js v20 or higher

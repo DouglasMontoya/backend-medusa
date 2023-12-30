@@ -78,22 +78,22 @@ const plugins = [
       path: "/",
     },
   },
-  {
-    resolve: `@medusajs/file-local`,
-    options: {
-      upload_dir: "uploads",
-      backend_url: process.env.BACKEND_URL || "http://localhost:9000",
-    },
-  }
   // {
-  //   resolve: `medusa-file-minio`,
+  //   resolve: `@medusajs/file-local`,
   //   options: {
-  //     endpoint: process.env.MINIO_ENDPOINT,
-  //     bucket: process.env.MINIO_BUCKET,
-  //     access_key_id: process.env.MINIO_ACCESS_KEY,
-  //     secret_access_key: process.env.MINIO_SECRET_KEY,
+  //     upload_dir: "uploads",
+  //     backend_url: process.env.BACKEND_URL || "http://localhost:9000",
   //   },
   // }
+  {
+    resolve: `medusa-file-minio`,
+    options: {
+      endpoint: process.env.MINIO_ENDPOINT,
+      bucket: process.env.MINIO_BUCKET,
+      access_key_id: process.env.MINIO_ACCESS_KEY,
+      secret_access_key: process.env.MINIO_SECRET_KEY,
+    },
+  }
 ];
 
 const modules = {

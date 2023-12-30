@@ -19,7 +19,13 @@ JWT_SECRET=something
 COOKIE_SECRET=something
 MEILISEARCH_HOST=http://localhost:7700
 MEILISEARCH_API_KEY=ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+MINIO_ENDPOINT=http://localhost:9001
+MINIO_BUCKET=medusa-bucket
+MINIO_ACCESS_KEY=<ACCESS_KEY>
+MINIO_SECRET_KEY=<SECRET_KEY>
 ```
+
+* Change `<ACCESS_KEY>` and `<SECRET_KEY>` for the credentials you created in minio
 
 3. **Install dependencies:**
     * Run the following command to install all necessary dependencies:

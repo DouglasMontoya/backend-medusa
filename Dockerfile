@@ -7,8 +7,12 @@ WORKDIR /usr/src/app
 # Copy the necessary files
 COPY package*.json ./
 
+RUN npm install -g npm@latest
+
+RUN npm install -g node-gyp
+
 # Install dependencies
-RUN npm install
+RUN npm install --force
 
 # Install the medusa-cli
 RUN npm install @medusajs/medusa-cli -g

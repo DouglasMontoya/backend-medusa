@@ -4,12 +4,13 @@ FROM node:20
 # Set the working directory
 WORKDIR /usr/src/app
 
+# Install Python
+RUN apt-get update && apt-get install -y python
+
 # Copy the necessary files
 COPY package*.json ./
 
 RUN npm install -g npm@latest
-
-RUN npm install -g node-gyp
 
 # Install dependencies
 RUN npm install --force

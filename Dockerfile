@@ -4,8 +4,8 @@ FROM node:20
 # Set the working directory
 WORKDIR /usr/src/app
 
-# Install Python
-RUN apt-get update && apt-get install -y python
+# Install Python3
+RUN apt-get update && apt-get install -y python3
 
 # Copy the necessary files
 COPY package*.json ./

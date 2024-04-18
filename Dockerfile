@@ -1,19 +1,4 @@
-# Usamos una imagen base de Python 3
-FROM python:3
-
-# Actualizamos los paquetes del sistema
-RUN apt-get update
-
-# Instalamos curl que se usará para instalar Node.js
-RUN apt-get install -y curl
-
-# Descargamos e instalamos Node.js v20
-RUN curl -sL https://deb.nodesource.com/setup_20.x | bash -
-RUN apt-get install -y nodejs
-
-# Verificamos las instalaciones
-RUN python3 --version
-RUN node --version
+FROM node:20.10.0
 
 # Set the working directory
 WORKDIR /usr/src/app

@@ -1,11 +1,11 @@
-# Set the base image to Node 17.1.0-alpine
-FROM node
+# Set the base image to Ubuntu
+FROM ubuntu:latest
 
 # Set the working directory
 WORKDIR /usr/src/app
 
-# Install Python3
-RUN apt-get update && apt-get install -y python3
+# Install Python and Node.js
+RUN apt-get update && apt-get install -y python3 nodejs npm
 
 # Copy the necessary files
 COPY package*.json ./
